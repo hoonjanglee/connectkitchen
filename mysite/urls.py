@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from connectkitchen import views
+from connectkitchen import views #추가
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name = 'index')
+    path('', views.index, name = 'index') #추가
 ]
