@@ -14,10 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from connectkitchen import views #추가
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name = 'index') #추가
+    path('', views.index, name = 'index'), #추가
+    path('accounts/', include('accounts.urls')), #로그인 account 페이지 url 연결
+
 ]
